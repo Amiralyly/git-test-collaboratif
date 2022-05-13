@@ -19,7 +19,10 @@ class Manager extends Employe implements Directeur
 
     public function afficherRDV()
     {
-        echo " Rendrez-vous de $this->nom, $this->prenom : $this->client";
+        echo parent::getNom() . ", " . parent::getPrenom() . " : j'ai rendez vous avec $this->client"; 
+        // ou peux faire aussi faire: 
+        // " echo $this->nom, $this->prenom : j'ai rendez vous avec $this->client";
+        // mais on devois changer le propriete de class Employe de private pour protected $nom; protected $prenom;
     }
 
 }
